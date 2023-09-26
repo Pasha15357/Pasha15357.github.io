@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+h2 {
+    position    : absolute;
+    top:170px;
+    left: 30px;
+    width: 100%;
+}
+
+body{
+    background:#fff url(../fon.jpg) no-repeat 25% 20px;
+    background-size: cover;
+}
+.container9{
+    float:left;
+    margin-top: 10px;
+    background:#fff url(images/FONCONT.png)
+    width:1200px;
+    height:520px;
+    border-radius: 30px;
+}
+.container{
+    background:#fff url(images/FONCONT.png)
+    width:1200px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    margin: none;
+    /*height:1000px;
+    margin:100px auto 0px auto;
+    border:10px solid #333;
+    -moz-box-shadow:1px 1px 12px #000;
+    -webkit-box-shadow:1px 1px 12px #000;
+    box-shadow:1px 1px 12px #000;*/
+}
+a.back{
+    width:184px;
+    height:32px;
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    background:transparent url(../back.png) no-repeat top left;
+}
+.wrap{
+    width:200px;
+    height:200px;
+    margin:0px;
+    overflow:hidden;
+    position:relative;
+    float:left;
+}
+.wrap a img  {
+    border:none;
+    position:absolute;   
+    top:-66.5px;
+    left:-150px;
+    height:500px;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+

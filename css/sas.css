@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Libre+Baskerville');
+body {
+  margin: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+body:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  /*background: linear-gradient(45deg, rgba(0,0,0,0), rgba(255,255,255,.8));*/
+}
+
+nav {
+  text-align: center;
+  padding: 40px 0 0;
+  }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  display: block;
+  color: white;
+}
+.topmenu a:hover {color:red;text-decoration: none;}
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+}
+.topmenu > li > a {
+  position: relative;
+  padding: 10px 15px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+}
+.topmenu > li > a:before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 100%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  transition: .3s;
+}
+.topmenu li:hover a:before {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+.submenu {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 100%;
+  width: 150px;
+  padding: 15px 0 15px;
+  margin-top: 5px;
+  background: DimGrey;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0,0,0,.2);
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 20px);
+  transition: .3s;
+}
+.topmenu > li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.submenu a {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: .3s linear;
+}
+.submenu a:hover {background: #e8e8e8;text-decoration: none;}
+footer{
+ position: fixed;
+  right: 90px;
+  bottom: 80%;
+  /*left:50%;
+  bottom:50px;*/
+}
+
+
+/********************** добавляем форме адаптивность **********************/
+@media (max-width: 600px) {
+  .form-wrap {margin: 20px auto; max-width: 550px; width:100%;}
+  .profile, form {float: none; width: 100%;}
+  h1 {margin-top: auto; padding-bottom: 50px;}
+  form {border-radius: 0 0 20px 20px;}
+}
+/*body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}*/
+.foto{
+    width: 80%;
+    height: 75%;
+    border-radius: 100px;
+}
+.col-sm{
+    text-align: center;
+}
+.col{
+    padding: 50px;
+    text-align: center;
+}
+.container1{
+    width: 916px;
+    margin: auto;
+}
+.container2{
+    width: 916px;
+    border: 2px solid;
+}
+.ad{
+    width:790px;
+    height:336px;
+    position:relative;
+    margin:28px 52px;
+    background-color:#333;
+}
+.ad_1 img{
+    width:35px;
+    height:336px;
+    position:absolute;    
+}
+.ad_2 img{
+    width:0px;
+    height:336px;
+    margin-left:18px;
+    position:absolute;
+}
+.slice_1{left:0px;}
+.slice_2{left:36px;}
+.slice_3{left:72px;}
+.slice_4{left:108px;}
+.slice_5{left:144px;}
+.slice_6{left:180px;}
+.slice_7{left:216px;}
+.slice_8{left:252px;}
+.slice_9{left:288px;}
+.slice_10{left:324px;}
+.slice_11{left:360px;}
+.slice_12{left:396px;}
+.slice_13{left:432px;}
+.slice_14{left:468px;}
+.slice_15{left:504px;}
+.slice_16{left:540px;}
+.slice_17{left:576px;}
+.slice_18{left:612px;}
+.slice_19{left:648px;}
+.slice_20{left:684px;}
+.slice_21{left:720px;}
+.slice_22{left:756px;}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0A122A;
+}
+
+/* Let's style the wrapper in such away that, 
+it should always be at the center of the browser */
+.wrapper {
+  position: absolute;
+  /*top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 550px;*/
+}
+
+/* Style the Un-order list by setting its list-style to none */
+.wrapper ul {
+  list-style: none;
+}
+
+/* Style the list items inside the UL list, by setting its width, height and line-height 
+  and float them to left and set its border and border-radius.
+ */
+.wrapper ul li {
+  width: 80px;
+  height: 80px;
+  line-height: 50px;
+  margin: 0 0px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 5px solid #555555;
+  /*float: left;*/
+  transition: all 0.5s ease;
+  opacity: 0.9;
+}
+/* Style the icons by setting its color and margin-top value to 20px 
+to align it properly */
+.wrapper ul li .fa {
+  color: #555555;
+  margin-top: 15px;
+  transition: all 0.5s ease;
+  opacity: 0.9;
+}
+
+/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+  to icons for glowing effect and use transition property for smooth transition effect. */
+/*facebook*/
+.wrapper ul li:hover.facebook {
+  border: 5px solid #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+
+}
+
+.wrapper ul li:hover .fa-facebook {
+  color: #3b5998;
+  text-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+
+/*twitter*/
+.wrapper ul li:hover.vk {
+  border: 5px solid #00aced;
+  box-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-vk {
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+/* instagram */
+.wrapper ul li:hover.instagram {
+  border: 5px solid #cd40d7;
+  box-shadow: 0 0 15px #cd40d7;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-instagram {
+  color: #cd40d7;
+  text-shadow: 0 0 15px #cd40d7;
+  transition: all 0.5s ease;
+}
+
+/* google */
+.wrapper ul li:hover.twitch {
+  border: 5px solid #6b11d1;
+  box-shadow: 0 0 15px #6b11d1;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-twitch {
+  color: #6b11d1;
+  text-shadow: 0 0 15px #6b11d1;
+  transition: all 0.5s ease;
+}
+
+/* whatsapp */
+.wrapper ul li:hover.youtube {
+  border: 5px solid #be1212;
+  box-shadow: 0 0 15px #be1212;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-youtube {
+  color: #be1212;
+  text-shadow: 0 0 15px #be1212;
+  transition: all 0.5s ease;c6ab18
+}
+
+.wrapper ul li:hover.viber {
+  border: 5px solid #4dc247;
+  box-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-viber {
+  color: #4dc247;
+  text-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+
+/* media queries */
+
+@media screen and (max-width: 640px){
+  .wrapper {
+      width: 350px;
+  }
+  .wrapper ul li{
+      margin-top: 10px;
+  }
+  .wrapper ul li.google{
+      margin-left: 60px;
+  }
+}
+
+
+@media screen and (max-width: 340px){
+  .wrapper {
+      width: 150px;
+  }
+  .wrapper ul li{
+      margin:15px;
+  }
+  .wrapper ul li.google{
+      margin-left: 15px;
+  }
+}
+.image1{
+  position: absolute;
+  display: none;
+  text-align: justify;
+  padding-right: 20px;  
+}
+.image2{
+  display: none;
+  position: absolute;
+  text-align: justify;
+  padding-right: 20px; 
+}
+.image3{
+  position: absolute;
+  display: none;
+  text-align: justify;
+  padding-right: 20px; 
+}
+.image4{
+  display: none;
+  position: absolute;
+  text-align: justify;
+  padding-right: 20px; 
+}
+.image5{
+  position: absolute;
+  display: none;
+  text-align: justify;
+  padding-right: 20px; 
+}
+.image6{
+  display: none;
+  position: absolute;
+  text-align: justify;
+  padding-right: 20px; 
+}
+.image7{
+  position: absolute;
+  display: none;
+  text-align: justify;
+  padding-right: 20px; 
+}
+.image8{
+  display: none;
+  position: absolute;
+  text-align: justify;
+  padding-right: 20px; 
+}
+.image9{
+  position: absolute;
+  display: none;
+  text-align: justify;
+  padding-right: 20px; 
+}
+.image10{
+  display: none;
+  position: absolute;
+  text-align: justify;
+  padding-right: 20px; 
+}
+#panel {
+    background : url('images/bb-cont.jpg') top center;
+    position : relative;
+    font-size : 12px;
+    color : #cbd1da;
+    text-shadow : 0 1px 0 rgba(0, 0, 0, 0.4);
+    border : #fff solid 1px;
+    padding : 20px 20px 20px 20px;
+    margin-left : 20px;
+    box-shadow : 0 1px 10px rgba(0, 0, 0, 0.9) inset;
+    height: 225px;
+    width: 460px;
+    display: none;
+    margin-bottom: -8px;
+}
+.slide {
+    background: url('/images/ob_avtore.png') no-repeat right top;
+    padding: 0;
+    margin: 0;
+}
+.btn-slide {
+    background: url('/files/panel/images/white-arrow.gif') no-repeat right -50px;
+    text-align: center;
+    font-size : 12px;
+    width: 144px;
+    height: 34px;
+    padding: 10px 10px 0 0;
+    margin-left: 430px;
+    display: block;
+    font: bold;
+    color : #6a6a6a;
+    text-shadow : 0 1px 2px #ffffff;
+    text-decoration: none;
+}
+.active {
+    background-position: right 10px;
+}
+.box1{
+    background-color: black;
+    border-radius: 30px;
+    height: 1300px;
+    padding-top: 30px;
+    background: rgba(0,0, 0, 0.8);***
+}
+ol{
+    padding-left: 20px;
+    font-size: 21px;
+}
+
+
+.im1{
+  position: absolute;
+  margin-left: 1200px;
+  margin-top: 470px; 
+  width: 100px;
+  height: 100px; 
+}
+.imm1{
+  display: none;
+  position: absolute;
+  margin-left: 1250px;
+  margin-top: 470px; 
+}
+
+.im2{
+  position: absolute;
+  margin-left: 1400px;
+  margin-top: 640px; 
+  width: 100px;
+  height: 100px;
+}
+
+.imm2{
+  display: none;
+  position: absolute;
+  margin-left: 1200px;
+  margin-top: 640px;
+}
+
+.im3{
+  position: absolute;
+  margin-left: 340px;
+  margin-top: 620px; 
+  width: 100px;
+  height: 100px;
+}
+
+.imm3{
+  display: none;
+  position: absolute;
+  margin-left: 390px;
+  margin-top: 620px;
+}
+
+.im4{
+  position: absolute;
+  margin-left: 1240px;
+  margin-top: 320px; 
+  width: 100px;
+  height: 100px;
+}
+
+.imm4{
+  display: none;
+  position: absolute;
+  margin-left: 1290px;
+  margin-top: 320px;
+}
+
+.im5{
+  margin-left: 1070px;
+  margin-top: 400px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.imm5{
+  display: none;
+  position: absolute;
+  margin-left: 1120px;
+  margin-top: 400px;
+}
+
+.im6{
+  margin-left: 190px;
+  margin-top: 370px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.imm6{
+  display: none;
+  position: absolute;
+  margin-left: 240px;
+  margin-top: 370px;
+}
+
+.im7{
+  margin-left: 760px;
+  margin-top: 325px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.imm7{
+  display: none;
+  position: absolute;
+  margin-left: 810px;
+  margin-top: 325px;
+}
+
+.im8{
+  margin-left: 440px;
+  margin-top: 700px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.imm8{
+  display: none;
+  position: absolute;
+  margin-left: 490px;
+  margin-top: 700px;
+}
+
+.im9{
+  margin-left: 700px;
+  margin-top: 360px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.imm9{
+  display: none;
+  position: absolute;
+  margin-left: 750px;
+  margin-top: 360px;
+}
+
+.im10{
+  margin-left: 840px;
+  margin-top: 345px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.imm10{
+  display: none;
+  position: absolute;
+  margin-left: 890px;
+  margin-top: 345px;
+}
+.im11 {
+  margin-left: 850px;
+  margin-top: 300px;
+}
+.panelA1{
+    background:#fff url(images/FONCONT.png)
+    width:120px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    margin: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 45%;
+}
+.wrapper1 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background:#fff url(images/FONCONT.png)
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.content1 {
+  flex: 1 0 auto;
+
+}
+.content2 {
+  flex: 1 0 auto;
+
+}
+.footer1 {
+  flex: 0 0 auto;
+}
